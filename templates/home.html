@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class='container'>
+    {% if request.user.is_authenticated %}
+        <h1 class=''>homepage</h1>
+    {% else %}
+        <div class="container front-box">
+            <div class='front-title'>
+                <b>Overwhelmed?</b> We can help.
+            </div>
+            <div class='container front-subtitle'>
+                <p>A simpler way to stay organized. if you have crazy job or ambitious project, we will be your trusty sidekick.
+            </div>
+            <div>
+                <a class='btn btn-lg btn-outline-dark front-signup' href="{% url 'account:signup' %}">Sign up</a>
+            </div>
+            <div>
+                <p class='front-login'>Already have an account? <a class='front-loginlink' href="{% url 'account:login' %}">Login</a></p>
+            </div> 
+        </div>
+    {% endif %}     
+</div>
+
+{% endblock content %}
