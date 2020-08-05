@@ -1,5 +1,6 @@
 from django import forms
-from django.contrib.auth import get_user_model
+from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -14,7 +15,7 @@ from django.contrib.auth.models import User
 
 
 class SignupForm(UserCreationForm):
-    email = forms.EmailField(required=True)
+    email = forms.EmailField(required=False)
     class Meta:
         model = User
         fields = ("username", "email", "password1", "password2")
@@ -25,6 +26,14 @@ class SignupForm(UserCreationForm):
         if commit:
             user.save()
         return user
+#            user = authenticate(username=self.cleaned_data['username'],
+#                                password=self.cleaned_data['password1'])
+#            if user is not None:
+#                return HttpResponseRedirect("home.html")
+#            else:
+#                console.log('not authenticated')
+#            login(request, user)
+#            
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
