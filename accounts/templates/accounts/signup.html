@@ -4,8 +4,7 @@
 {% block content %}
 
     <div class='container signup-box'>
-        <div class='container signup-text'>
-        </div>
+            <p class='password-form-title'>Create your account</p>
         <form method="post">
             {% csrf_token %}
             {% include 'bs4_form.html' with form=form %}

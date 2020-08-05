@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Reset your password
+From: noreply@flowcus.com
+To: admin2@a.com
+Date: Wed, 05 Aug 2020 19:37:54 -0000
+Message-ID: 
+ <159665627480.75170.14809344856638204772@Users-MacBook-Pro-3.local>
+
+
+Someone asked for password reset for email admin2@a.com. If it was you, please follow the link below:
+http://127.0.0.1:8000/accounts/reset/MzY/5is-6e536ceea80dfd129de2/
+-------------------------------------------------------------------------------
