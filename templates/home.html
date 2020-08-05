@@ -13,17 +13,18 @@
     {% if request.user.is_authenticated %}
         <h1 class=''>homepage</h1>
     
+    {{ user.username }}
     
     
-    
-    
+<!-- HOME VISITOR -->    
     {% else %}
         <div class="container front-box">
-            <div class='front-title'>
-                <b>Overwhelmed?</b> We can help.
+            <div class='container no-gutters row justify-content-lg-center front-title-box'>
+                <p class='front-bold-title text-xl-right col-xl-5'>Overwhelmed?</p> 
+                <p class='front-light-title text-xl-left col-xl-5'>We can help you.</p>
             </div>
             <div class='container front-subtitle'>
-                <p>A simpler way to stay organized. if you have crazy job or ambitious project, we will be your trusty sidekick.
+                <p>The truth is that to-do list is old technology. We believe it deserves better, so we redesigned it. A simpler way to get shit done. Give it a shot.</p>
             </div>
             <div>
                 <a class='btn btn-lg btn-danger front-signup' href="{% url 'accounts:signup' %}">Sign up</a>

@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load bootstrap %}
+
 {% block content %}
 
-    <div class='container'>
-        <h1>Login</h1>
+    <div class='container login-box'>
         <form method="post">
             {% csrf_token %}
-            {{ form|bootstrap }}
-            <input class='btn btn-lg btn-dark' type="submit" value="Login">
-            <a href="{% url 'accounts:password_reset' %}">Forgot your password?</a>
+            {% include 'bs4_form.html' with form=form %}
+            <div class='login-btn'>
+                <input class='btn btn-lg btn-dark login-btn-text' type="submit" value="Login">            
+            </div>
+            <div class='container login-forgot'>
+                <a class='login-forgot-text' href="{% url 'accounts:password_reset' %}">Forgot your password?</a>
+            </div>
         </form>
     </div>
 
