@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
-{% block title %} 
-<title>Flowcus</title> 
-{% endblock title %}  
+ 
 
 {% block content %}
 
@@ -12,7 +9,11 @@
     
     {% if request.user.is_authenticated %}
         <h1 class=''>homepage</h1>
-    
+
+        <button type="submit" id='delete-btn'>delete</button>
+        <button type="submit" id='add-btn'>add</button>
+
+
     {{ user.username }}
     
     
@@ -35,5 +36,6 @@
         </div>
     {% endif %}     
 </div>
+
 
 {% endblock content %}
